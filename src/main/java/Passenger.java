@@ -46,7 +46,7 @@ public class Passenger {
     }
     public int Age(int z){
         int age = z;
-        if (age > 15){
+        if (age > 16){
             System.out.println("Age is: "+ age);
         }
         else
