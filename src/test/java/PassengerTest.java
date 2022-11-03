@@ -1,7 +1,7 @@
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 public class PassengerTest {
     Passenger title;
@@ -9,7 +9,6 @@ public class PassengerTest {
     Passenger name;
     Passenger num;
     Passenger age;
-
     @BeforeEach
     void setUp() {
         title = new Passenger();
@@ -27,7 +26,6 @@ public class PassengerTest {
     void testTitleF(){
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { title.Title("x");});
         assertEquals("Your title is not accepted please use Mr, Ms, Mrs", exMessage.getMessage());
-
         //assertNotEquals("Your title is not accepted please use Mr, Ms, Mrs" , title.Title("X"));
     }
 
@@ -80,3 +78,5 @@ public class PassengerTest {
     void tearDown() {
     }
 }
+
+
