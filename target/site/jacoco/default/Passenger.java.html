@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Passenger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">week5</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Passenger.java</span></div><h1>Passenger.java</h1><pre class="source lang-java linenums">import java.util.Scanner;
+
+<span class="fc" id="L3">public class Passenger {</span>
+
+    public String Title(String t){
+<span class="fc" id="L6">        String title = t;</span>
+<span class="fc bfc" id="L7" title="All 2 branches covered.">        switch(title){</span>
+            case &quot;Mr&quot;:
+            case &quot;Ms&quot;:
+            case &quot;Mrs&quot;:
+<span class="fc" id="L11">                System.out.println(&quot;Your tittle: &quot; + title);</span>
+<span class="fc" id="L12">                break;</span>
+            default:
+<span class="fc" id="L14">                System.out.println(&quot;Your title is not accepted please use Mr, Ms, Mrs&quot;);</span>
+        }
+<span class="fc" id="L16">        return title;</span>
+    }
+    public String Name(String n){
+<span class="fc" id="L19">        String name = n;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if(name.length()&gt;3){</span>
+<span class="fc" id="L21">            System.out.println(&quot;Your Name: &quot; + name);</span>
+        }
+        else
+<span class="fc" id="L24">            System.out.println(&quot;Your Name is invalid must have more then 3 characters&quot;);</span>
+<span class="fc" id="L25">        return name;</span>
+    }
+
+    public String ID(String x){
+<span class="fc" id="L29">        String id = x;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(id.length()&gt;9){</span>
+<span class="fc" id="L31">            System.out.println(&quot;ID is: &quot;+ id);</span>
+        }
+        else
+<span class="fc" id="L34">            System.out.println(&quot;Your ID is invalid must be more then 10 numbers&quot;);</span>
+<span class="fc" id="L35">        return id;</span>
+    }
+
+    public String Phone(String y){
+<span class="fc" id="L39">        String num = y;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if(num.length()&gt;6){</span>
+<span class="fc" id="L41">            System.out.println(&quot;Number is: &quot;+ num);</span>
+        }
+        else
+<span class="fc" id="L44">            System.out.println(&quot;Your number is invalid minimum number are 7&quot;);</span>
+<span class="fc" id="L45">        return num;</span>
+    }
+    public int Age(int z){
+<span class="fc" id="L48">        int age = z;</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (age &gt; 16){</span>
+<span class="fc" id="L50">            System.out.println(&quot;Age is: &quot;+ age);</span>
+        }
+        else
+<span class="fc" id="L53">            System.out.println(&quot;You must be over 16 to fly&quot;);</span>
+<span class="fc" id="L54">        return age;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
