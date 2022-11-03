@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 public class PassengerTest {
     Passenger title;
@@ -9,7 +8,6 @@ public class PassengerTest {
     Passenger name;
     Passenger num;
     Passenger age;
-
     @BeforeEach
     void setUp() {
         title = new Passenger();
@@ -24,7 +22,11 @@ public class PassengerTest {
         assertEquals("Mr" , title.Title("Mr"));
     }
     @Test
-    void testTitleF(){assertEquals("X" , title.Title("X"));}
+    void testTitleF(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { title.Title("x");});
+        assertEquals("Your title is not accepted please use Mr, Ms, Mrs", exMessage.getMessage());
+        //assertNotEquals("Your title is not accepted please use Mr, Ms, Mrs" , title.Title("X"));
+    }
 
     @Test
     void testName(){
@@ -32,7 +34,9 @@ public class PassengerTest {
     }
     @Test
     void testNameF(){
-        assertEquals("XX" , name.Name("XX"));
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { name.Name("xx");});
+        assertEquals("Your Name is invalid must have more then 3 characters", exMessage.getMessage());
+        //assertEquals("XX" , name.Name("XX"));
     }
 
     @Test
@@ -41,7 +45,10 @@ public class PassengerTest {
     }
     @Test
     void testIdF(){
-        assertEquals("12", id.ID("12"));
+
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { id.ID("xx");});
+        assertEquals("Your ID is invalid must be more then 10 numbers", exMessage.getMessage());
+        //assertEquals("12", id.ID("12"));
     }
 
     @Test
@@ -50,7 +57,9 @@ public class PassengerTest {
     }
     @Test
     void testPhoneF(){
-        assertEquals("083", num.Phone("083"));
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { num.Phone("xx");});
+        assertEquals("Your number is invalid minimum number are 7", exMessage.getMessage());
+        //assertEquals("083", num.Phone("083"));
     }
 
     @Test
@@ -59,10 +68,14 @@ public class PassengerTest {
     }
     @Test
     void testAgeF(){
-        assertEquals(16, age.Age(16));
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { age.Age(15);});
+        assertEquals("You must be over 16 to fly", exMessage.getMessage());
+        //assertEquals(16, age.Age(16));
     }
 
     @AfterEach
     void tearDown() {
     }
 }
+
+
