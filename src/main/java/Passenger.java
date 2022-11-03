@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Passenger {
 
@@ -11,7 +10,7 @@ public class Passenger {
                 System.out.println("Your tittle: " + title);
                 break;
             default:
-                System.out.println("Your title is not accepted please use Mr, Ms, Mrs");
+                throw new IllegalArgumentException("Your title is not accepted please use Mr, Ms, Mrs");
         }
         return title;
     }
@@ -21,7 +20,7 @@ public class Passenger {
             System.out.println("Your Name: " + name);
         }
         else
-            System.out.println("Your Name is invalid must have more then 3 characters");
+            throw new IllegalArgumentException("Your Name is invalid must have more then 3 characters");
         return name;
     }
 
@@ -31,7 +30,7 @@ public class Passenger {
             System.out.println("ID is: "+ id);
         }
         else
-            System.out.println("Your ID is invalid must be more then 10 numbers");
+            throw new IllegalArgumentException("Your ID is invalid must be more then 10 numbers");
         return id;
     }
 
@@ -41,7 +40,7 @@ public class Passenger {
             System.out.println("Number is: "+ num);
         }
         else
-            System.out.println("Your number is invalid minimum number are 7");
+            throw new IllegalArgumentException("Your number is invalid minimum number are 7");
         return num;
     }
     public int Age(int z){
@@ -50,7 +49,7 @@ public class Passenger {
             System.out.println("Age is: "+ age);
         }
         else
-            System.out.println("You must be over 16 to fly");
+            throw new IllegalArgumentException("You must be over 16 to fly");
         return age;
     }
 }
