@@ -13,6 +13,7 @@ public class Passenger {
                 throw new IllegalArgumentException("Your title is not accepted please use Mr, Ms, Mrs");
         }
         return title;
+        //implemnt method
     }
     public String Name(String n){
         String name = n;
