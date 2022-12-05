@@ -44,7 +44,7 @@ public class PassengerTest {
     @Test
     void testIdF(){
 
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "John Doe", "123542", 1222222223, 19);});
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mr", "John Doe", "12", 1222222223, 19);});
         assertEquals("This is not a valid ID.", exMessage.getMessage());
         //assertEquals("12", id.ID("12"));
     }
