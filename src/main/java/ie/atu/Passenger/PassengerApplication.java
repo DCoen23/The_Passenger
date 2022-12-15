@@ -18,6 +18,7 @@ public class PassengerApplication {
 
 	PassengerService myService;
 
+
 	public PassengerApplication(PassengerService myService) {
 		this.myService = myService;
 	}
@@ -27,13 +28,13 @@ public class PassengerApplication {
 	}
 
 	@GetMapping
-	public List<Passenger> getPassenger(){
-
+	public List<Passenger> getPassenger()
+	{
 		return myService.getPassenger();
 	}
 	@GetMapping("/{passengerID}")
 	public Passenger getPassenger(@PathVariable String passengerID){
-
 		return myService.getPassenger(passengerID);
 	}
+
 }
