@@ -1,4 +1,4 @@
-package ie.atu.Passenger;
+package ie.atu.passenger;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

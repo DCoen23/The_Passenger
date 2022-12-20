@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: ie.atu.PassengerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.19 s <<< FAILURE! - in ie.atu.PassengerApplicationTests
+ie.atu.PassengerApplicationTests  Time elapsed: 0.189 s  <<< ERROR!
+java.lang.IllegalStateException: Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [ie.atu.PassengerApplication]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\g00370083\Desktop\The_Passenger\target\classes\ie\atu\PassengerApplication.class], Generic bean: class [ie.atu.PassengerService]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\g00370083\Desktop\The_Passenger\target\classes\ie\atu\PassengerService.class]]
+

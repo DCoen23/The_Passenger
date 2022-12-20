@@ -1,6 +1,5 @@
-package ie.atu.Passenger;
+package ie.atu.passenger;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

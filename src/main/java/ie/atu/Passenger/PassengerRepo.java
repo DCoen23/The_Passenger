@@ -1,4 +1,4 @@
-package ie.atu.Passenger;
+package ie.atu.passenger;
 
 public interface PassengerRepo {
 }

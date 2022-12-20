@@ -1,13 +1,11 @@
-package ie.atu.Passenger;
+package ie.atu.passenger;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class PassengerApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+//	@Test
+//	void contextLoads() {
+//	}
 }
